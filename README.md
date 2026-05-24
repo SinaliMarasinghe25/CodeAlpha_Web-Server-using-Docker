@@ -2,7 +2,7 @@
 Nginx web server containerized with Docker -CodeAlpha DevOps Internship Task 4
 
 # Web Server using Docker 🐳
-### CodeAlpha DevOps Internship — Task 4
+### CodeAlpha DevOps Internship 
 
 A personal portfolio website served by **Nginx** running inside a **Docker container**. Built to demonstrate Docker containerization basics, container lifecycle management, health monitoring, and deployment best practices.
 
@@ -120,5 +120,6 @@ docker exec -it my-portfolio /bin/bash
 ## Author
 
 **Sinali Mrasinghe**
+
 CodeAlpha DevOps Internship — Task 4
 

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alex Dev | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Sinali<span>Dev</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="greeting">Hello, I'm</p>
+      <h1 class="name">Sinali Lawanya</h1>
+      <h2 class="role">Full Stack Developer & DevOps Enthusiast</h2>
+      <p class="tagline">I build things for the web and deploy them with Docker.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-card">
+        <div class="code-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <pre class="code-text">
+<span class="c-blue">FROM</span> nginx:latest
+
+<span class="c-green">COPY</span> ./website /usr/share/
+       nginx/html
+
+<span class="c-yellow">EXPOSE</span> 80
+
+<span class="c-pink">CMD</span> ["nginx", "-g",
+     "daemon off;"]
+        </pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-icon">🚀</div>
+        <h3>DevOps</h3>
+        <p>I containerize applications using Docker and automate deployments with CI/CD pipelines on AWS and Azure.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">💻</div>
+        <h3>Development</h3>
+        <p>I build full stack web apps using modern frameworks and tools, focusing on clean code and performance.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">🛠️</div>
+        <h3>Tools</h3>
+        <p>Docker, Jenkins, Git, Azure Pipelines, Nginx, Linux — I am in the journey of learning to work across the full DevOps toolchain.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section class="skills" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <span class="skill-name">Docker</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Linux</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Azure Pipelines</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Jenkins</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="70%"></div></div>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">HTML / CSS</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="95%"></div></div>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Git</span>
+        <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="projects" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-tag">Docker</div>
+        <h3>Dockerized Web Server</h3>
+        <p>Built and containerized an Nginx web server using Docker. Served a static website with custom configuration.</p>
+        <div class="project-stack">
+          <span>Docker</span><span>Nginx</span><span>HTML/CSS</span>
+        </div>
+      </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p class="contact-sub">Want to work together? Reach out.</p>
+    <div class="contact-links">
+      <a href="#" class="contact-btn">📧 Email Me</a>
+      <a href="#" class="contact-btn">🐙 GitHub</a>
+      <a href="#" class="contact-btn">💼 LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Built with Docker + Nginx | Served in a container 🐳</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

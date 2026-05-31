@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Docker Web Server</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">🐳 DockerServer</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="status.html">Status</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>About This Project</h1>
+        <p>Docker containerization — CodeAlpha DevOps Internship Task </p>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="info-card">
+            <h2>🎯 What I Built</h2>
+            <p>A production-grade Nginx web server running inside a Docker container,
+            covering the full container lifecycle from image build to health monitoring.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>🐳 What is Docker?</h2>
+            <p>Docker packages applications and all their dependencies into lightweight,
+            portable containers that run identically on any machine.</p>
+            <div class="comparison">
+                <div class="compare-bad">
+                    <h4>❌ Without Docker</h4>
+                    <ul>
+                        <li>"Works on my machine" problem</li>
+                        <li>Manual dependency setup</li>
+                        <li>Hard to scale</li>
+                        <li>Environment conflicts</li>
+                    </ul>
+                </div>
+                <div class="compare-good">
+                    <h4>✅ With Docker</h4>
+                    <ul>
+                        <li>Runs identically everywhere</li>
+                        <li>Everything bundled together</li>
+                        <li>Scale with one command</li>
+                        <li>Complete isolation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>🔄 Container Lifecycle</h2>
+            <div class="lifecycle">
+                <div class="lc-step">📝<br>Write<br>Dockerfile</div>
+                <div class="lc-arrow">→</div>
+                <div class="lc-step">🔨<br>Build<br>Image</div>
+                <div class="lc-arrow">→</div>
+                <div class="lc-step">▶️<br>Run<br>Container</div>
+                <div class="lc-arrow">→</div>
+                <div class="lc-step">📊<br>Monitor<br>Health</div>
+                <div class="lc-arrow">→</div>
+                <div class="lc-step">⏹️<br>Stop &amp;<br>Remove</div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>💡 Key Concepts Learned</h2>
+            <div class="concept-grid">
+                <div class="concept">📦 Image vs Container</div>
+                <div class="concept">🔌 Port Mapping</div>
+                <div class="concept">❤️ Health Checks</div>
+                <div class="concept">📋 Volume Mounts</div>
+                <div class="concept">🔄 Restart Policies</div>
+                <div class="concept">🐙 Docker Compose</div>
+                <div class="concept">🔒 Security Headers</div>
+                <div class="concept">📊 Resource Limits</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>🐳 Docker Web Server &nbsp;|&nbsp; CodeAlpha DevOps Internship</p>
+    </footer>
+</body>
+</html>

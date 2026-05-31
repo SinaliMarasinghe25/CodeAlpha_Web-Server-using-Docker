@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status | Docker Web Server</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">🐳 DockerServer</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="status.html" class="active">Status</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>🖥️ Server Status</h1>
+        <p>Live container monitoring dashboard</p>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="status-banner">
+            <span>✅ All Systems Operational</span>
+            <span class="status-time" id="last-updated">Updating...</span>
+        </div>
+
+        <div class="status-grid">
+            <div class="status-card">
+                <div class="s-label">Container</div>
+                <div class="s-value green">● Running</div>
+            </div>
+            <div class="status-card">
+                <div class="s-label">Web Server</div>
+                <div class="s-value green">● Nginx Active</div>
+            </div>
+            <div class="status-card">
+                <div class="s-label">Port Mapping</div>
+                <div class="s-value blue">8080 → 80</div>
+            </div>
+            <div class="status-card">
+                <div class="s-label">Uptime</div>
+                <div class="s-value" id="uptime">Calculating...</div>
+            </div>
+            <div class="status-card">
+                <div class="s-label">Base Image</div>
+                <div class="s-value">nginx:alpine</div>
+            </div>
+            <div class="status-card">
+                <div class="s-label">Health Check</div>
+                <div class="s-value green">● Healthy</div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2>💻 Monitor Commands</h2>
+            <div class="cmd-list">
+                <div class="cmd-row">
+                    <code>docker ps</code>
+                    <span>Check running containers</span>
+                </div>
+                <div class="cmd-row">
+                    <code>docker stats nginx-webserver</code>
+                    <span>Live CPU &amp; memory usage</span>
+                </div>
+                <div class="cmd-row">
+                    <code>docker logs nginx-webserver</code>
+                    <span>View access logs</span>
+                </div>
+                <div class="cmd-row">
+                    <code>docker inspect nginx-webserver</code>
+                    <span>Full container details</span>
+                </div>
+                <div class="cmd-row">
+                    <code>docker compose ps</code>
+                    <span>Compose service status</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>🐳 Docker Web Server &nbsp;|&nbsp; CodeAlpha DevOps Internship</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

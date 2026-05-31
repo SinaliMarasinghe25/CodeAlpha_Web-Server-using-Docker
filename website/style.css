@@ -11,18 +11,75 @@ body {
   scroll-behavior: smooth;
 }
 
-/* NAVBAR */
+/* ── NAVBAR ── */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  background: rgba(10, 18, 10, 0.95);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid #1a2e1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #111827;
+    border-bottom: 1px solid #1e293b;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
+.nav-brand { color: #06b6d4; font-weight: 700; font-size: 1.2rem; }
+.nav-links  { display: flex; list-style: none; gap: 0.5rem; }
+.nav-links a {
+    color: #94a3b8; text-decoration: none;
+    padding: 0.5rem 1rem; border-radius: 8px;
+    font-size: 0.9rem; transition: all 0.2s;
+}
+.nav-links a:hover, .nav-links a.active { background: #1a2235; color: #06b6d4; }
+
+/* ── PAGE HEADER ── */
+.page-header { text-align: center; padding: 4rem 2rem 2rem; background: linear-gradient(180deg, #111827 0%, #0a0e1a 100%); }
+.page-header h1 { font-size: 2.5rem; font-weight: 800; }
+.page-header p  { color: #94a3b8; margin-top: 0.5rem; }
+
+/* ── CONTENT WRAPPER ── */
+.content-wrapper { max-width: 950px; margin: 0 auto; padding: 2.5rem 1.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+
+/* ── INFO CARD ── */
+.info-card { background: #1a2235; border: 1px solid #1e293b; border-radius: 16px; padding: 2rem; }
+.info-card h2 { color: #06b6d4; margin-bottom: 1.2rem; font-size: 1.3rem; }
+.info-card p  { color: #94a3b8; line-height: 1.8; }
+
+/* ── COMPARISON ── */
+.comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+.compare-bad  { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.2); border-radius: 12px; padding: 1.2rem; }
+.compare-good { background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.2); border-radius: 12px; padding: 1.2rem; }
+.compare-bad h4, .compare-good h4 { margin-bottom: 0.8rem; }
+.compare-bad ul, .compare-good ul { list-style: none; }
+.compare-bad ul li, .compare-good ul li { color: #94a3b8; font-size: 0.88rem; padding: 0.25rem 0; }
+
+/* ── LIFECYCLE ── */
+.lifecycle { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.lc-step { flex: 1; min-width: 80px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.25); border-radius: 10px; padding: 0.9rem; text-align: center; font-size: 0.82rem; color: #94a3b8; line-height: 1.6; }
+.lc-arrow { color: #3b82f6; font-size: 1.2rem; }
+
+/* ── CONCEPTS ── */
+.concept-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-top: 1rem; }
+.concept { background: #111827; border: 1px solid #1e293b; border-radius: 8px; padding: 0.75rem; text-align: center; font-size: 0.85rem; color: #94a3b8; }
+
+/* ── STATUS PAGE ── */
+.status-banner { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); border-radius: 12px; color: #10b981; font-weight: 600; }
+.status-time { font-size: 0.82rem; font-weight: 400; color: #64748b; }
+.status-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.status-card { background: #1a2235; border: 1px solid #1e293b; border-radius: 12px; padding: 1.5rem; text-align: center; }
+.s-label { color: #64748b; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+.s-value { font-weight: 600; font-size: 0.95rem; }
+.s-value.green { color: #10b981; }
+.s-value.blue  { color: #06b6d4; }
+
+/* ── COMMANDS ── */
+.cmd-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.cmd-row { display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 1rem; background: #111827; border: 1px solid #1e293b; border-radius: 8px; gap: 1rem; }
+.cmd-row code { font-family: 'Cascadia Code', monospace; font-size: 0.85rem; color: #06b6d4; background: rgba(6,182,212,0.1); padding: 0.25rem 0.7rem; border-radius: 5px; white-space: nowrap; }
+.cmd-row span { color: #94a3b8; font-size: 0.85rem; }
+
+/* ── FOOTER ── */
+.footer { text-align: center; padding: 2rem; color: #64748b; font-size: 0.85rem; border-top: 1px solid #1e293b; background: #111827; margin-top: 2rem; }
 
 .logo {
   font-size: 1.6rem;

@@ -50,3 +50,35 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });
+// ── DOCKER STATUS PAGE FUNCTIONS ──────────────────
+
+// Uptime counter (used on status.html)
+function updateUptime() {
+    const el = document.getElementById('uptime');
+    if (!el) return; // Stops if element doesn't exist on current page
+    if (!sessionStorage.getItem('startTime')) {
+        sessionStorage.setItem('startTime', Date.now());
+    }
+    const secs = Math.floor((Date.now() - parseInt(sessionStorage.getItem('startTime'))) / 1000);
+    const h = Math.floor(secs / 3600);
+    const m = Math.floor((secs % 3600) / 60);
+    const s = secs % 60;
+    el.textContent = `${h}h ${m}m ${s}s`;
+}
+
+// Timestamp updater (used on status.html)
+function updateTimestamp() {
+    const el = document.getElementById('last-updated');
+    if (!el) return; // Stops if element doesn't exist on current page
+    el.textContent = 'Last updated: ' + new Date().toLocaleTimeString();
+}
+
+// Start the timers if we're on status page
+if (document.getElementById('uptime') || document.getElementById('last-updated')) {
+    updateUptime();
+    updateTimestamp();
+    setInterval(function () {
+        updateUptime();
+        updateTimestamp();
+    }, 1000);
+}

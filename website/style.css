@@ -15,7 +15,6 @@ body {
   min-height: 100vh;
 }
 
-/* ── GLASS MIXIN (reused everywhere) ── */
 .glass {
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(18px);
@@ -24,7 +23,6 @@ body {
   box-shadow: 0 8px 32px rgba(27, 94, 32, 0.10);
 }
 
-/* ── NAVBAR ── */
 nav {
   display: flex;
   justify-content: space-between;
@@ -86,7 +84,6 @@ nav {
   color: #1b5e20;
 }
 
-/* ── HERO ── */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -164,7 +161,6 @@ nav {
   border-color: #2e7d32;
 }
 
-/* ── CODE CARD (hero visual) ── */
 .code-card {
   background: rgba(255, 255, 255, 0.50);
   backdrop-filter: blur(20px);
@@ -228,7 +224,6 @@ section {
   border-radius: 2px;
 }
 
-/* ── ABOUT CARDS ── */
 .about {
   background: rgba(255, 255, 255, 0.20);
   backdrop-filter: blur(8px);
@@ -275,7 +270,6 @@ section {
   line-height: 1.7;
 }
 
-/* ── SKILLS ── */
 .skills-grid {
   max-width: 700px;
   margin: 0 auto;
@@ -320,7 +314,6 @@ section {
   transition: width 1.4s ease;
 }
 
-/* ── PROJECTS ── */
 .projects {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(6px);
@@ -390,7 +383,6 @@ section {
   font-weight: 500;
 }
 
-/* ── CONTACT ── */
 .contact {
   text-align: center;
 }
@@ -428,7 +420,6 @@ section {
   box-shadow: 0 8px 28px rgba(27, 94, 32, 0.18);
 }
 
-/* ── FOOTER ── */
 .footer {
   text-align: center;
   padding: 2rem;
@@ -441,7 +432,6 @@ section {
   margin-top: 2rem;
 }
 
-/* ── DOCKER / STATUS PAGES ── */
 .page-header {
   text-align: center;
   padding: 4rem 2rem 2rem;

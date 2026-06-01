@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-
   //  SKILL BARS ANIMATION 
   // Find all skill fill bars and animate them when visible
   const skillFills = document.querySelectorAll('.skill-fill');
@@ -50,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });
-// ── DOCKER STATUS PAGE FUNCTIONS ──────────────────
+// DOCKER STATUS PAGE FUNCTIONS 
 
 // Uptime counter (used on status.html)
 function updateUptime() {

@@ -1,125 +1,156 @@
-# CodeAlpha_Web-Server-using-Docker
-Nginx web server containerized with Docker -CodeAlpha DevOps Internship Task 4
+# 🐳 CodeAlpha Web Server using Docker
 
-# Web Server using Docker 🐳
-### CodeAlpha DevOps Internship 
+![Docker](https://img.shields.io/badge/Docker-Containerized-blue?logo=docker)
+![Nginx](https://img.shields.io/badge/Nginx-Web%20Server-green?logo=nginx)
+![AWS](https://img.shields.io/badge/AWS-EC2-orange?logo=amazonaws)
+![Docker Compose](https://img.shields.io/badge/Docker%20Compose-Orchestration-blue)
+![Status](https://img.shields.io/badge/HealthCheck-Enabled-brightgreen)
 
-A personal portfolio website served by **Nginx** running inside a **Docker container**. Built to demonstrate Docker containerization basics, container lifecycle management, health monitoring, and deployment best practices.
-
----
-
-## Live Preview
-
-> Run locally at `http://localhost:8080` following the steps below.
+A containerized portfolio website powered by **Nginx**, built as part of the **CodeAlpha DevOps Internship**. This project demonstrates Docker containerization, container lifecycle management, health monitoring, Docker Compose orchestration, and cloud deployment best practices.
 
 ---
 
-## Project Structure
+## 🚀 Features
 
-```
-docker-webserver/
+* 🐳 Docker containerization
+* 🌐 Nginx web server deployment
+* 🔄 Docker Compose orchestration
+* ❤️ Container health checks
+* 📊 Resource monitoring and troubleshooting
+* 📁 Volume-based log management
+* ☁️ AWS EC2 deployment
+* 📦 Docker Hub image distribution
+
+---
+
+## 📂 Project Structure
+
+```text
+CodeAlpha_Web-Server-using-Docker/
 │
-├── Dockerfile          # Instructions to build the Docker image
-├── nginx.conf          # Custom Nginx configuration
-├── .dockerignore       # Files excluded from the Docker build
+├── Dockerfile
+├── docker-compose.yml
+├── .dockerignore
+├── README.md
+│
+├── nginx/
+│   └── conf.d/
+│       └── default.conf
+│
 └── website/
-    ├── index.html      # Main portfolio webpage
-    ├── style.css       # Styling with green and gold theme
-    └── script.js       # Scroll animations and interactivity
+    ├── index.html
+    ├── about.html
+    ├── status.html
+    ├── style.css
+    └── script.js
 ```
 
 ---
 
-## Requirements Covered
+## 🛠️ Technology Stack
 
-| Requirement | How it is covered |
-|---|---|
-| Docker containerization basics | Dockerfile builds a custom Nginx image |
-| Deploy and manage a web server | Nginx serves the portfolio site inside Docker |
-| Container lifecycle and commands | build, run, stop, start, restart, rm, ps |
-| Monitor container health and troubleshoot | HEALTHCHECK, docker stats, logs, inspect, exec |
-| Container-based deployment best practices | Custom nginx.conf, HEALTHCHECK, .dockerignore, image tagging |
-
----
-
-## Tech Stack
-
-- **Docker** — containerization
-- **Nginx** — web server
-- **HTML / CSS / JavaScript** — frontend portfolio site
+* Docker
+* Docker Compose
+* Nginx (Alpine)
+* HTML
+* CSS
+* JavaScript
+* AWS EC2
+* Docker Hub
+* Git & GitHub
 
 ---
 
-## How to Run
+## 🎯 Internship Requirements Covered
 
-### Prerequisites
-- [Docker Desktop](https://www.docker.com/products/docker-desktop) installed and running
-- Any terminal (Git Bash, PowerShell, or Command Prompt)
+| Requirement                     | Implementation                                    |
+| ------------------------------- | ------------------------------------------------- |
+| Docker containerization basics  | Dockerfile-based image creation                   |
+| Deploy and manage a web server  | Nginx running inside Docker                       |
+| Container lifecycle management  | Build, Run, Stop, Start, Restart                  |
+| Monitor health and troubleshoot | Logs, Stats, Inspect, Health Checks               |
+| Deployment best practices       | Compose, Volumes, Health Checks, Restart Policies |
 
-### Steps
+---
 
-**1. Clone the repository**
+## ▶️ Run Using Docker Compose
+
 ```bash
 git clone https://github.com/SinaliMarasinghe25/CodeAlpha_Web-Server-using-Docker.git
+
 cd CodeAlpha_Web-Server-using-Docker
+
+docker compose up -d --build
 ```
 
-**2. Build the Docker image**
-```bash
-docker build -t portfolio-webserver .
-```
+Open:
 
-**3. Run the container**
-```bash
-docker run -d -p 8080:80 --name my-portfolio portfolio-webserver
-```
-
-**4. Open in browser**
-```
+```text
 http://localhost:8080
 ```
 
 ---
 
-## Container Management Commands
+## 🐳 Docker Hub
+
+Pull the image:
 
 ```bash
-# See running containers and health status
+docker pull sinalimarasinghe25/codealpha_web-server-using-docker:latest
+```
+
+Run:
+
+```bash
+docker run -d --name my-portfolio -p 80:80 sinalimarasinghe25/codealpha_web-server-using-docker:latest
+```
+
+---
+
+## ☁️ AWS EC2 Deployment
+
+As an additional enhancement, the Docker image was pushed to Docker Hub and deployed on an AWS EC2 instance to demonstrate cloud-based container deployment.
+
+Deployment Workflow:
+
+```text
+Dockerfile
+    ↓
+Docker Image
+    ↓
+Docker Hub
+    ↓
+AWS EC2
+    ↓
+Running Container
+```
+
+---
+
+## 📊 Monitoring Commands
+
+```bash
 docker ps
 
-# Stop the container
-docker stop my-portfolio
+docker logs my-portfolio
 
-# Start the container
-docker start my-portfolio
-
-# Remove the container
-docker rm my-portfolio
-```
-
----
-
-## Health Monitoring Commands
-
-```bash
-# Live CPU and memory usage
 docker stats my-portfolio
 
-# View health check history
-docker inspect --format='{{json .State.Health}}' my-portfolio
+docker inspect my-portfolio
 
-# Live request logs
-docker logs -f my-portfolio
-
-# Go inside the container to troubleshoot
-docker exec -it my-portfolio /bin/bash
+docker inspect --format='{{.State.Health.Status}}' my-portfolio
 ```
 
 ---
 
-## Author
+## 👩‍💻 Author
 
-**Sinali Mrasinghe**
+Sinali Marasinghe
 
-CodeAlpha DevOps Internship — Task 4
+CodeAlpha DevOps Internship
 
+---
+
+## ⭐ Repository Topics
+
+docker • docker-compose • nginx • aws-ec2 • dockerhub • containerization • devops • web-server • portfolio-website
